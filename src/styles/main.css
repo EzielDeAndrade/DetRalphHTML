@@ -23,7 +23,7 @@
 }
 
 .manual{
-    height: 25px;
+    height: 40px;
     width: 750px;
     border: 1px solid #000000;
     background-color: rgb(195, 219, 211);
@@ -36,8 +36,8 @@
     
 }
 .square{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border: 1px solid #000000;
     background-color: rgb(26, 181, 129);
 }
