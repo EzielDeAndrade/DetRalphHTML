@@ -77,7 +77,7 @@ function addListenerHitBox(){
                 if(state.values.vida<=0){
                     clearInterval(state.values.sountDownTimerId);
                     clearInterval(state.values.timerId);
-                    alert("Game Over! O seu resultado foi:"+state.values.result);
+                    alert("Game Over! O seu resultado foi:"+state.values.result);}
         });
     });
 }
