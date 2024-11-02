@@ -29,15 +29,13 @@ function countDown(){
     state.values.currentTime--;
     state.view.timeleft.textContent=state.values.currentTime;
     if(state.values.currentTime<=0){
-        state.values.vida--;
+        // state.values.vida--;
         state.view.vida.textContent=state.values.vida;
-        state.values.currentTime=60;
-       
+        state.values.currentTime=30;
         clearInterval(state.values.sountDownTimerId);
         clearInterval(state.values.timerId);
         alert("Game Over! O seu resultado foi:"+state.values.result);
         
-         
         
     }
 }
@@ -70,7 +68,7 @@ function addListenerHitBox(){
                 if (state.values.result%10=== 0 && state.values.gameVelocity>100){
                     state.values.gameVelocity-=300;
                     moveEnemy();
-                }
+                }                
             }
             else state.values.vida--;
                 state.view.vida.textContent=state.values.vida;
