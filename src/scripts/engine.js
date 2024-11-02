@@ -12,8 +12,8 @@ const state={
         gameVelocity:1000,
         hitPosition:0,
         result:0,
-        currentTime:60,
-        vida:3,
+        currentTime:30,
+        vida:5,
 
     },
 };
@@ -32,11 +32,11 @@ function countDown(){
         state.values.vida--;
         state.view.vida.textContent=state.values.vida;
         state.values.currentTime=60;
-        if(state.values.vida<=0){
-            clearInterval(state.values.sountDownTimerId);
-            clearInterval(state.values.timerId);
-            alert("Game Over! O seu resultado foi:"+state.values.result);
-        }
+       
+        clearInterval(state.values.sountDownTimerId);
+        clearInterval(state.values.timerId);
+        alert("Game Over! O seu resultado foi:"+state.values.result);
+        
          
         
     }
@@ -72,6 +72,12 @@ function addListenerHitBox(){
                     moveEnemy();
                 }
             }
+            else state.values.vida--;
+                state.view.vida.textContent=state.values.vida;
+                if(state.values.vida<=0){
+                    clearInterval(state.values.sountDownTimerId);
+                    clearInterval(state.values.timerId);
+                    alert("Game Over! O seu resultado foi:"+state.values.result);
         });
     });
 }
